@@ -1,13 +1,16 @@
 const expect = chai.expect;
 
-describe('Array', function() {
-    describe('#indexOf()', function() {
-        it('should return -1 when the value is not present', function() {
-            expect([1, 2, 3].indexOf(4)).to.equal(-1);
+describe('MyFunctions', function() {
+    describe('#doSomething', function() {
+        it('should concatenate the two parameters', function() {
+            let x = doSomething("Hello", 5);
+            expect(x).to.equal("Hello5");
         });
-        it('should equal 5', function(){
-           
-            expect(2+"3").to.equal("23")
-        })
+         
+        it("should throw an error if first parameter is not a string", function() {
+            expect(function() {
+                doSomething(5, 5);
+            }).to.throw(Error);
+        });
     });
 });
